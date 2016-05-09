@@ -15,7 +15,7 @@ var rootPath = path.normalize(__dirname + '/../');
 // Serve static pages as is from app directory
 app.use(express.static(rootPath + '/app'));
 // Define server port
-app.listen(3006);
+app.listen(process.env.PORT||80);
 
 app.get('/webhook', function (req, res) {
   console.log('get webhook -->'+req.query['hub.verify_token']);
