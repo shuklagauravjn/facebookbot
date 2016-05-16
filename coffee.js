@@ -48,7 +48,7 @@ app.post('/webhook/', function (req, res) {
         sendInitialFreeDrinkMessage(sender);
         continue;
       }else if (text.indexOf('resend')>-1 || text.indexOf('buy')>-1 || text.indexOf('free')>-1) {
-        if(counter===4){
+        if(counter===2){
           counter=0;
           sendTextMessage(sender,"Congrats you just earned a free coffee.");
           sendFreeMessage(sender);
